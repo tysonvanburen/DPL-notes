@@ -1,6 +1,17 @@
 1 git information
 
 First: git status
-Second: git add
-Third: git commit
+Second: git add text
+Third: git commit -m "text"
 Forth: git push
+
+Branching:
+$git branch
+*master
+$git checkout -b sample
+switched/created sample branch
+$git branch
+master
+*smaple
+$git checkout master
+switched to branch master
