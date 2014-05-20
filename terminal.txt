@@ -1,0 +1,11 @@
+Terminal commands
+pwd - Full path to working directory
+ls - list the contents of a particular directory
+cd - change to another directory (as in DOS)
+mkdir - create new directory
+rm - remove a file
+sudo - authenticate yourself a superuser to gain extra security privileges
+cat - concatenate to screen
+cp[file] - copy file to file
+cp[file[dir] - copy file to directory
+mv[file][new file name] - move/rename file
