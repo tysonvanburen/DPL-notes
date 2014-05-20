@@ -1,1 +1,6 @@
 1 git information
+
+First: git status
+Second: git add
+Third: git commit
+Forth: git push
