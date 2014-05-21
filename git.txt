@@ -1,8 +1,19 @@
 1 git information
 
+Git Commands:
+$git add '*.txt' - adds all the files with .txt at the end.
+$git log - browse the commits made and see what changes have been made.
+$git remote add origin https://address - Sets up so we can push our local repo to the GitHub server.
+$git pull origin master - pulls any new changes from the master branch.
+$git diff HEAD - looks at the difference between the last and most recent commits.
+$git diff --staged - to see the changes you just staged
+$git reset octofamily/octodog.txt - removes the file.
+
+
 First: git status
 Second: git add text
 Third: git commit -m "text"
+Forth: git push -u - the -u tells Git to remember the parameters, so that next time we can simply run "git push".
 Forth: git push
 
 Branching:
@@ -15,3 +26,5 @@ master
 *smaple
 $git checkout master
 switched to branch master
+$git branch -d clean_up
+deletes the branch "clean_up"
