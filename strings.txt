@@ -32,3 +32,5 @@ str.form(1) => "lo"
 
 .singularize
 "posts".singularize  => "post"
+
+booya baby!
