@@ -1,3 +1,3 @@
-puts "What is your name?"
+puts "What is your last name?"
 answer = gets.chomp
-puts "Hi " + answer + " nice to meet you!"
+puts "Nice to mee you Mr. " + answer.capitalize + " :)"
