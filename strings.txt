@@ -1,0 +1,34 @@
+----------------------------------
+STRING METHODS
+----------------------------------
+
+.at
+str = "hello"
+str.at(0)      # => "h"
+str.at(1..3)   # => "ell"
+str.at(-2)     # => "l"
+str.at(-2..-1) # => "lo"
+str.at(5)      # => nil
+str.at(5..-1)  # => ""
+
+.blank?
+"".blank? => true
+"hello".blank? => false
+
+.first
+str = "hello"
+str.first  => "h"
+str.first(1) => "h"
+str.first(2) => "he"
+str.first(3) => "hell"
+
+.from
+str = "hello"
+str.from(0) => "hello"
+str.form(1) => "lo"
+
+.pluralize
+"post".pluralize  => "posts"
+
+.singularize
+"posts".singularize  => "post"
