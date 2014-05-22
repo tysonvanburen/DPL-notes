@@ -1,0 +1,104 @@
+-----------------------------------------------------
+ONLY USE DOUBLE QUOTES
+-----------------------------------------------------
+
+'you don't want to do that' (don't use single quotes!!)
+"you don't want to do that"
+"this" + " " + "that"
+
+-----------------------------------------------------
+STRING_INTERPOLATION
+-----------------------------------------------------
+name = "Tyson"
+
+"Hello, " + name + ". How are you?"
+(better way of writing it out)
+"Hello, #{name}. How are you?" :) nice and clean!!
+"String_Interpolation"
+
+Inside of the {} we can put anything we want!
+
+'Hello, #{name}. How old are you?'
+returens - "Hello, \#{name}. How are you?"
+(Single quoted strings do not work with Sting_Interpolation)
+
+"1 + 1 = #{1 + 1}"
+returens = 1 + 1 = 2
+
+-----------------------------------------------------
+NEW LINE CHARACTER
+-----------------------------------------------------
+
+"Hello\nTyson" (Works)
+returens - Hello
+Tyson
+'Hello\nTyson' (Doesn't work)
+returens - error
+
+
+-----------------------------------------------------
+ARRAYS
+-----------------------------------------------------
+[ ] = empty Array!!
+
+Iteration - (Going one by one over the collection)
+---------
+["Tyson", "Will", "Ty", "Jason", "Jeremy", "Nhi"]
+    0        1      2      3         4       5
+
+Assign to a variable
+^^                 ^^
+storage = ["Tyson", "Will", "Ty", "Jason", "Jeremy", "Nhi"]
+
+puts storage[0]
+returens- "Tyson"
+
+Indexes - a container inside of an array
+-------
+
+Method Chaining - name.reverse.capitalize.upcase.downcase
+---------------
+
+Array Methods
+-------------
+
+people.each-
+
+storage.count -
+returens the total Indexes are in the array!
+
+storage << "Soldier"
+<< shovel operator-- Adds shit into the array! aka "Soldier"
+
+storage.size
+storage.length
+storage.count
+returens - The total Indexes inside of the array.
+
+
+people = ["Tyson", "Will", "Ty", "Jason", "Jeremy", "Nhi"]
+
+people.each do |person|
+    puts person
+end
+
+returens =
+Tyson
+Will
+Ty
+Jason
+Jeremy
+Nhi
+
+things = [1, 2, 3]
+
+things.each do |number|
+    puts number * number
+end
+
+1
+4
+9
+
+things = ["Jeremy", 1, 5.3, ["Ty", 4, -0.4],[]]
+an array inside of an array is called Multi Dimensional Array
