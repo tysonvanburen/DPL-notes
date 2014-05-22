@@ -1,0 +1,17 @@
+-----------------------------
+INTEGERS
+-----------------------------
+<=
+less than or equal to
+
+<=>
+ Returns -1, 0, +1 or nil depending on whether fix is less than, equal to, or greater than numeric
+
+div
+Performs integer division: returns interger value
+
+to_s
+Returns a string containing the representation of fix radix base (between 2 and 36)
+
+===
+Return true if fix equals other numerically
