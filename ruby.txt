@@ -175,9 +175,9 @@ h.has_key?("b")  #=> false
 apidock.com/ruby
 -----------------------------------------------------
 
-  -----------------------------------------------------
-  SYMBOL
-  -----------------------------------------------------
+-----------------------------------------------------
+SYMBOL
+-----------------------------------------------------
 
 :name = Symbol
 
@@ -242,3 +242,16 @@ Inside the loop i = 1
 Inside the loop i = 2
 Inside the loop i = 3
 Inside the loop i = 4
+
+----------------------------------
+DATA TYPES
+----------------------------------
+-Numbers
+
+-Booleans (which can be true or false)
+
+-Strings  (words or phrases like "I'm learning Ruby!")
+
+-Prints (command just takes whatever you give it and prints it to the screen.)
+
+-Puts (is slightly different: it adds a new (blank) line after the thing you want it to print.)
