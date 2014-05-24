@@ -255,3 +255,5 @@ DATA TYPES
 -Prints (command just takes whatever you give it and prints it to the screen.)
 
 -Puts (is slightly different: it adds a new (blank) line after the thing you want it to print.)
+
+false and nill are the only ones that can communulate to false

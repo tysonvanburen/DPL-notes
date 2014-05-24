@@ -1,0 +1,39 @@
+*note: need to know what I'm cooking
+
+grab_frying_pan
+grab_utencils
+grab_ingredients("eggs", "bacon", "toast")
+thing_being_cooked = place_ingredient_into_pan("bacon", "pan")
+
+if ingredients_is_cooked
+  remove_ingredient_from("pan")
+  place_ingredient_on_plate
+
+thing_being_cooked = place_ingredient_into_pan("eggs", "pan")
+
+
+if ingredients_is_cooked
+  remove_ingredient_from("pan")
+  place_ingredient_on_plate
+
+thing_being_cooked = place_ingredient_into_toaster("bread","toaster")
+
+
+if ingredients_is_cooked
+  remove_ingredient_from("toaster")
+  place_ingredient_on_plate
+
+serve_food
+
+
+*The Three Little Pigs
+
+wolf_wants_to_come_in
+  if pigs_say_no
+  wolf_blows_down_house
+
+if house_made_of_straw or house_made_of_grass
+  house_blows_down
+
+if house_blows_down
+pig_runs_to_next_house
