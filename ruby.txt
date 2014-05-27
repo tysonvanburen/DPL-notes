@@ -116,7 +116,7 @@ VARIABLES
 -----------------------------------------------------
 
 local_variable = "hello"
-
+''
 @instance_variable = "Jeremy"
 
 @@class_variable = "Human"
