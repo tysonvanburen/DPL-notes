@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    chronic (0.10.2)
+    curb (0.8.5)
+    quake (0.0.3)
+      curb (>= 0.7.15)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  chronic
+  quake

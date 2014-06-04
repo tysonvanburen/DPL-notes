@@ -55,7 +55,7 @@ end
 attr_writer :color, :size, :arms, :design, :material, :weight, :name, :maker, :brand, :comfort_level, :is_borken
 #assigne value
 attr_reader :color, :size, :arms, :design, :material, :weight, :name, :maker, :brand, :comfort_level, :is_borken
-#returnes value
+#returns value
 attr_accessor :color, :size, :arms, :design, :material, :weight, :name, :maker, :brand, :comfort_level, :is_borken
 #does both attr_reader and attr_writer combined #most commonly used
 
@@ -165,7 +165,7 @@ end
 #example of an instance method
 
 class Human
-  def self.evolve #Class method #self is a term ruby uses to refference Human
+  def self.evolve #Class method #self is a term ruby uses to reference Human
     puts "monkey to super being" #
   end
   def Human.evolve #Class method

@@ -1,0 +1,56 @@
+css-tricks.com
+CSS = Cascading Style Sheets
+UI = User interface
+UX = User experience
+
+CSS selectors
+
+* {
+
+} selects every single element
+
+_____________________________
+
+body {
+
+
+} selects the body tag
+
+_____________________________
+
+#wrap {
+
+} selects the id wrap
+_____________________________
+
+.row {
+
+
+} selects the class row
+_____________________________
+
+input[type=text]{
+
+
+} selects all input tags with the attribute text
+
+_____________________________
+
+ul > li {
+
+
+} selects all the li elements inside of of the ul tag
+
+_____________________________
+
+a:hover, a:active, a:focus {
+
+
+} selecting the anchor tag and adding pseudo classes to them
+
+_____________________________
+
+div p.small{
+
+
+} select all the p tags that are small inside of a div tag
