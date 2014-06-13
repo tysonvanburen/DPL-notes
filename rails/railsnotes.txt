@@ -1,0 +1,146 @@
+Models
+-----------------
+- Anything you need to represent an object
+- The model is the singular version of an object and the table is the plural version
+
+-----------------
+TO CREATE A MODEL
+
+  1 rails generate model Animal
+  2 creates a table using ruby code inside of the db migrate folder
+  3 inside of the block
+                  t.string :name, null: false
+                  t.string :breed, limit: 100
+                  t.string :species
+                  t.string :age, default: 1
+
+  4 go to database.yml inside config
+  5 host: localhost inside development:
+  6 create the database by typing rake db:create
+  7 update the data base by typing rake db:migrate
+  8 hop into sql psql -d sandbox_development
+  9 anytime we want to make a change... we need to make a new migration... rails g migration add_columns_to_animals
+ - this creates a new file with an instance method change.
+ - rails db:rollback undoes whatever you just did
+
+    10 to add a new column... add_column tell where we are adding the column
+ - add_column :animals, :hungry, :boolean, default: true
+    11 remove_column
+    12 to make changes
+    - rails g migration change_columns_for_animals
+    13 adding data iside of our tabel (seeds.rb) to set up data for our database
+    - inside of seeds.rb
+      animal = Animal.new(name: "Fluffy", breed: "Poodle", species: "Dog", age: 3, birthday: 3.years.ago, trained: true)
+      animal.save
+    - shorter way
+      animal = Animal.create(name: "Fluffy", breed: "Poodle", species: "Dog", age: 3, birthday: 3.years.ago, trained: true)
+    - rake db:seed updates to the data base what we just did
+
+
+Rails C commands
+------------------
+Animal.count
+Animal.first
+Animal.where(name: "Fluffy")
+- Active record relations object
+ - Allows us to chain
+Animal.where(name: "Fluffy").limit(1)
+
+Animal.where(name: "Fluffy", age: 2)
+Animal.where("name = 'Fluffy'")
+Animal.where("name like 'Fluffy%")
+
+
+name = "Fluffy"
+Animal.where("name like '#{name}%'")
+*Never mix Ruby with Raw SQL*
+ SQL Injection!!!!
+
+for every ? add a argument
+Animal.where("lower(name) like ?", "@{name}%")
+
+Animal.where("birthday < ?", 1.year.ago)
+Animal.where("birthday < ? and name = ?", 1.year.ago, "Fluffy")
+Animal.where("birthday < ?").where(name: "Fluffy")
+
+CREATING A SCOPE
+-----------------
+Animal.where(trained: true) = all the animals that are currently trained
+Animal.trained.where('birthday < ?', 1.year.ago) = all trained animals born 1 year ago
+Animal.trained.limit(1)
+
+INNER JOINING
+-----------------
+
+has_many :animals
+belongs_to :trainer
+
+Three Types of Relations:
+  1-1 = One to One ... A has one of B and B belongs to A
+  1-M = One to Many ... A has many of B and B belongs to A
+  M-M = Many to Many ... A has many and belongs to B and B has many and belongs to A
+
+a = Animal.new()
+t.animal << a
+puts a into t.animal
+adds an animal to the trainer
+
+t = Trainer.first
+a.trainer = t
+a.trainers_name
+Tyson
+a.save
+
+scoped methods?
+
+
+
+
+
+--------------------------------------------------------------------------------
+Retrieving a Single Object
+--------------------------------------------------------------------------------
+1 Model.find
+  - #Find the client with primary key (id) 10.
+  - client = Client.find(10)
+  - #<Client id: 10, first_name: "Ryan">
+  - #The SQL equivalent of the above is:
+  - SELECT * FROM clients WHERE (clients.id = 10) LIMIT 1
+
+
+2 Model.take retrieves a record without any implicit ordering. For example:
+  - client = Client.take
+  - #<Client id: 1, first_name: "Lifo">
+  - #The SQL equivalent of the above is:
+  - SELECT * FROM clients LIMIT 1
+
+3 Model.first finds the first record ordered by the primary key. For example:
+  -client = Client.first
+  -#<Client id: 1, first_name: "LIfo">
+  -#The SQL equivalent of the above is:
+  -SELECT * FROM clients ORDER BY clients.id ASC LIMIT 1
+
+4 Model.last finds the last record ordered by the primary key. For example:
+  -client - Client.last
+  -#<Client id: 221, first_name: "Russel">
+  -#The SQL equivalent of the above is:
+  -SELECT * FROM clients ORDER BY clients.id DESC LIMIT 1
+
+5 Model.find_by finds the first record matching some conditions. For example:
+  -Client.find_by first_name: 'Lifo'
+  #<Client id: 1, first_name: "Lifo">
+
+  -Client.find_by first_name: 'Jon'
+  #=> nil
+
+  -It is equivalent to writing:
+  -Client.where(first_name: 'Lifo').take
+
+6 Model.take! retrieves a record without any implicit ordering. For example:
+  -client = Client.take!
+  #<Client id: 1, first_name: "Lifo">
+  #SELECT * FROM clients LIMIT 1
+
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------

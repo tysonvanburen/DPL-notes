@@ -1,0 +1,69 @@
+Controller
+-----------------
+
+rails new dpl_store -d postgresql
+
+---This concept is known as a Resource----
+
+The MODEL talks with the data base
+
+The CONTROLLER is the middle man, the people person dude
+-Talks to the MODEL and delivers the data to the users/VIEWS
+-The users ask something the CONTROLLER gets it from the MODEL and returns it back to the user
+
+The view is what you display to the user
+
+
+Animal      <=        Animals       <=       Animals
+MODEL       =>        CONTROLLER    =>       VIEWS
+          Routes                    Routes
+
+Routes
+-Secify which models to communicate with
+- /products..
+
+
+Product    <=        Products      <=        Products
+MODEL      =>        CONTROLLER    =>        VIEWS
+
+* Inside of the Controller Instance Methods... think of them as Actions *
+They will represent an attribute in some way
+
+- Specify our rout.rb
+ resources :products
+
+*rake routes*
+
+   Prefix Verb   URI Pattern                  Controller#Action
+    products GET    /products(.:format)          products#index
+             POST   /products(.:format)          products#create
+ new_product GET    /products/new(.:format)      products#new
+edit_product GET    /products/:id/edit(.:format) products#edit
+     product GET    /products/:id(.:format)      products#show
+             PATCH  /products/:id(.:format)      products#update
+             PUT    /products/:id(.:format)      products#update
+             DELETE /products/:id(.:format)      products#destroy
+
+PUT - updating
+GET - a resource
+PATCH
+
+4 gets = 4 pages
+
+product_pathgi
+product_url
+
+If the variable is not optional you have to supply a value for what those are
+
+^^ ^^ ^^
+R.E.S.T.
+E
+S
+T
+
+
+rails new dpl_store -d postgresql
+cd dpl_store
+rails g model Student
+rake db:create
+rake db:seed
