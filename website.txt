@@ -1,0 +1,50 @@
+Hyper Text Transfer Protocol
+the thing that takes stuff to the place where the thing is, and gets the things from the place with the stuff.
+
+Domain Name System
+some computers that turn your domain ame into some numbers and back again
+
+Domain Name
+yourcoolwebsite.com <== things that look like this
+
+http = Protocol
+https = Secure Protocol
+
+www = Subdomain
+
+.com = Top Level Domain TLD
+
+
+Step 1
+  -type in a website address ( also called a URL)
+Step 2
+  -Askes the DNS, where i can find www.ruby-lang.org?
+  -IP Address => Sure thing! It's at 221.186.184.68
+Step 3
+  -HTTP GET homepage
+Step 4
+  -Boom! Returns the home page.
+
+RDBMS
+  -Relational Database Management System
+  -A place to put your data
+
+NGINX
+  -A webserver program. there's a bunch of others.too.
+
+Webserver
+  -A program that will send files from your website server to someone's browser.
+
+Learning Resources:
+  -www.w3schools.com
+  -teamtreehouse.com
+  -www.codeschool.com
+  -dochub.io
+!!!!!Join a Ruby User Group in your city!!!!!
+Type in Url
+1. Get ip address of site form dns
+2. Connect to webserver of website
+3. Website connects to db
+4. Website gets files ready
+5. Webserver serves up website
+6. Your browser downloads the requested page
