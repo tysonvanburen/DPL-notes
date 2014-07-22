@@ -1,0 +1,16 @@
+BootStrap
+--------------------
+getbootstrap.com
+v3.1.1
+
+Responsive Designe
+Css Media Queres
+the number of column have to equal to 12
+<div class="col-md-1"></div>
+Offsetting columns
+.col.md-3.col-md-offset-3
+
+Grid options
+
+.col-xs-  .col-sm-  .col-md-  .com-lg-
+xs          sml      medium      Lrg

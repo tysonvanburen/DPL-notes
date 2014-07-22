@@ -61,9 +61,23 @@ E
 S
 T
 
+public
+private
+protected
+
+before and after hooks
+
 
 rails new dpl_store -d postgresql
 cd dpl_store
 rails g model Student
 rake db:create
 rake db:seed
+
+Helpers
+- pluralize
+-time_ago_in_words(3.minutes.from_now)
+time_ago_in_words(3.minutes).ago
+-number_to_currency
+number_to_human
+number_to_phone`
